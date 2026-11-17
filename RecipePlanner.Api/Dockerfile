@@ -10,7 +10,7 @@ COPY . .
 RUN dotnet publish -c Release -o /app/publish --no-restore
 
 # Stage 2: run with the small runtime-only image
-FROM mcr.microsoft.com/dotnet/aspnet:10.0
+FROM mcr.microsoft.com/dotnet/aspnet:11.0
 WORKDIR /app
 COPY --from=build /app/publish .
 
