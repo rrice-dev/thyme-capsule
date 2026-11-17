@@ -1,5 +1,5 @@
 # Stage 1: build with the full .NET SDK
-FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:11.0 AS build
 WORKDIR /src
 
 # Restore first, so Docker can cache packages between builds
